@@ -1,0 +1,164 @@
+% Author: W. Alex Chen, Department of Computer Science, National Chiao Tung University, Hsinchu, Taiwan
+% Email: alex81527@gmail.com
+% Date: May 12, 2017
+%
+% If you're a beginner at latex, the following page is quite helpful:
+% https://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fill in all the required fileds, and your're ready to go
+\newcommand{\CoverPage}{cover_page/cover.pdf}
+\newcommand{\TitlePage}{title_page/title.pdf}
+% You should fill in the fields in chinese_abstract/ab_zh.tex, and abstract/ab.tex
+\newcommand{\ChineseAbstract}{chinese_abstract/ab_zh}
+\newcommand{\Abstract}{abstract/ab}
+\newcommand{\Acknowledgement}{acknowledgement/ack}
+\newcommand{\Body}{body/sample-body}
+% Save your bibtex here
+\newcommand{\Bib}{sample-bibliography}
+
+% Thesis title, student name, and advisor name
+\newcommand{\TitleEnglish}{NGPLS - A Non GPS Position Location System}
+\newcommand{\TitleChinese}{一 個 非G P S之 定 位 系 統}
+\newcommand{\StudentNameEnglish}{Da-Ming Chang}
+\newcommand{\StudentNameChinese}{張大明}
+\newcommand{\AdvisorNameEnglish}{Shyan-Ming Yuan}
+\newcommand{\AdvisorNameChinese}{袁賢銘}
+
+% You can select fonts other than the default ones. (Recommended) 
+\newcommand{\EnglishFont}{Arial}
+\newcommand{\ChineseFont}{AR PL UKai TW}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{report}
+\pagestyle{plain}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\usepackage{wallpaper} % watermark 
+\usepackage{fontspec}  % use system fonts 
+\usepackage{xeCJK}     % CJK support
+\usepackage[left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{balance}
+\usepackage{color}
+\usepackage{pdfpages}
+%\usepackage{subfigure}
+\usepackage{xcolor,colortbl}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+
+% Auto line break for chinese letters
+\XeTeXlinebreaklocale "zh" 
+\XeTeXlinebreakskip = 0pt plus 1pt 
+
+% Select fonts
+\setmainfont[Mapping=tex-text]{\EnglishFont} 
+%AutoFakeBold設定粗體字要多粗
+%AutoFakeSlant設定斜體字要多斜，範圍-0.999到0.999，負值為往左斜
+\setCJKmainfont[AutoFakeBold=6,AutoFakeSlant=.4]{\ChineseFont} 
+
+
+% copy from macros.tex
+\newcommand{\Eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\Fig}[1]{Fig.~\ref{#1}}
+\newcommand{\Chap}[1]{Chapter~\ref{#1}}
+\newcommand{\Sec}[1]{Section~\ref{#1}}
+\newcommand{\Tab}[1]{Table~\ref{#1}}
+\newtheorem{thm}{Theorem}
+\newcommand{\bthm}{\begin{thm}\begin{textit}}
+\newcommand{\ethm}{\end{textit}\end{thm}}
+\newtheorem{lema}{Lemma}
+\newcommand{\bdla}{\begin{lema}\begin{textit}}
+\newcommand{\edla}{\end{textit}\end{lema}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{defn}{Definition}
+
+
+%\newfont{\chfont}{CFONTmk14}
+
+\begin{document}
+
+% Add NCTU watermark, scaled to 50% size
+\CenterWallPaper{0.5}{watermark/nctu_logo.pdf} 
+\setlength{\wpXoffset}{0 cm}
+\setlength{\wpYoffset}{0 cm}
+
+
+\includepdf[pages={-}]{\CoverPage}
+\includepdf[pages={-}]{\TitlePage}
+
+%The line spacing is the nominal vertical space between lines, baseline to baseline.  It is
+%stored in the parameter '\baselineskip'.  The default '\baselineskip' for the Computer Modern 
+%typeface is 1.2 times the '\fontsize'.
+\baselineskip 25pt 
+\pagebreak 
+\pagenumbering{Roman}
+
+%The '\addcontentsline'{EXT}{UNIT}{TEXT} command adds an entry to the specified list or table where:
+%
+%EXT
+%The extension of the file on which information is to be written, typically one of: 
+%'toc' (table of contents), 'lof' (list of figures), or 'lot' (list of tables).
+%
+%UNIT
+%The name of the sectional unit being added, typically one of the following, matching the value of the EXT argument:
+%'toc' The name of the sectional unit: 'part', 'chapter', 'section', 'subsection', 'subsubsection'.
+%'lof' For the list of figures.
+%'lot' For the list of tables.
+%
+%ENTRY
+%The text of the entry.
+\addcontentsline{toc}{chapter}{Abstract in Chinese} 
+\include{\ChineseAbstract}
+
+\addcontentsline{toc}{chapter}{Abstract}           
+\include{\Abstract}
+ 
+\addcontentsline{toc}{chapter}{Acknowledgement}     
+\include{\Acknowledgement}
+
+\addcontentsline{toc}{chapter}{Contents}            
+\tableofcontents
+
+\addcontentsline{toc}{chapter}{List of Figures}     
+\listoffigures
+
+\addcontentsline{toc}{chapter}{List of Tables}      
+\listoftables
+\pagebreak
+
+\setcounter{page}{1} 
+\pagenumbering{arabic}
+%\baselineskip 21pt
+
+\include{\Body}
+
+%\baselineskip=0pt
+\parsep=-4pt
+\itemsep=-4pt
+\parskip=0pt
+
+\bibliographystyle{abbrv}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{\Bib}                        
+
+%\baselineskip 14.5pt
+
+\end{document}
