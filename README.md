@@ -11,7 +11,7 @@
     [標楷體]:
     ```
     [ ! -d ~/.fonts ] && mkdir ~/.fonts  
-    cd ~/.fonts && curl -sSLO xxx  
+    cd ~/.fonts && curl -sSLO https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/kaiu.ttf
     fc-cache -fv  
     ```
 + LaTex Editor: Anything will do, e.g., TeXmaker/TeXstudio/TeXShop/etc. I prefer TeXstudio.  
