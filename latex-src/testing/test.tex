@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{report}
+\pagestyle{plain}
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{balance}
+\usepackage{color}
+\usepackage{pdfpages}
+%\usepackage{subfigure}
+\usepackage{xcolor,colortbl}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+
+\usepackage{fontspec} 
+\usepackage{xeCJK} 
+\newcommand{\EnglishFont}{Arial}
+\newcommand{\ChineseFont}{AR PL UKai TW}
+\setmainfont[Mapping=tex-text]{\EnglishFont} 
+\setCJKmainfont{\ChineseFont} 
+\newcommand{\TitleEnglish}{Design and Analysis of Optimal Threshold Offloading Algorithm for LTE Femtocell/Macrocell Networks}
+\newcommand{\TitleChinese}{LTE 網路最佳門檻卸載演算法設計與分析}
+\newcommand{\StudentNameEnglish}{Wei-Han Chen}
+\newcommand{\StudentNameChinese}{陳暐翰}
+\newcommand{\AdvisorNameEnglish}{Jyh-Cheng Chen}
+\newcommand{\AdvisorNameChinese}{陳志成}
+
+
+
+\newcommand{\TestFile}{chinese_abstract/ab_zh}
+%\newcommand{\Bib}{femto_twc}
+% Auto line break for chinese letters
+\XeTeXlinebreaklocale "zh" 
+\XeTeXlinebreakskip = 0pt plus 1pt 
+
+%Select fonts
+%\setmainfont[Mapping=tex-text]{Times New Roman} % rm
+%\setsansfont[Mapping=tex-text]{Arial}           % sf
+%\setmonofont{Courier New}                       % tt
+%\setCJKmainfont{AR PL UKai TW} %xelatex 標楷體
+%\setCJKmonofont{MingLiU}  %xelatex 細明體
+%...
+\begin{document}
+
+
+\input{\TestFile}
+%\bibliographystyle{abbrv}
+%\bibliography{\Bib}         
+
+\end{document}
