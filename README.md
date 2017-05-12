@@ -1,1 +1,1 @@
-# A latex template for MS thesis required by College of Computer Science, National Chiao Tung University.
+# A latex template for Phd/MS thesis of College of Computer Science, National Chiao Tung University, Hsinchu, Taiwan.
