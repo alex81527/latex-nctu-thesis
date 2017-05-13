@@ -1,4 +1,4 @@
-# A latex template for Phd/MS thesis of College of Computer Science, National Chiao Tung University, Hsinchu, Taiwan.  
+# A LateX template for Phd/MS thesis of College of Computer Science, National Chiao Tung University, Hsinchu, Taiwan.  
 
 ## Required Packages:  
 + ### TexLive:  
@@ -10,8 +10,8 @@
     (Arch) `sudo pacman -S ttf-liberation`  
     **[標楷體]**:
     ```
-    [ ! -d ~/.fonts ] && mkdir ~/.fonts  
-    cd ~/.fonts && curl -sSLO https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/kaiu.ttf
+    [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts  
+    curl -sSL https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/kaiu.ttf > ~/.local/share/fonts/kaiu.ttf  
     fc-cache -fv  
     ```
 + ### LaTex Editor: Anything will do, e.g., TeXmaker/TeXstudio/TeXShop/etc. I prefer TeXstudio.  
@@ -21,7 +21,7 @@
     `sudo apt-get install jabref`  
 
 ## How to use this template:  
-First, you should fill in the required fields in `main.tex`. Then complete the following steps:  
+LateX source files are placed in `latex-src`. First, you should fill in the required fields in `main.tex`. Then complete the following steps:  
 + Cover Page  
     There is a `.docx` template in `cover_page`. Modify and save it as `cover.pdf` in this folder.  
 + Thesis Title Page  
@@ -37,3 +37,10 @@ First, you should fill in the required fields in `main.tex`. Then complete the f
 
 Compile `main.tex` either using `make` or your Latex editor to generate your thesis.  
 Good luck and have fun!   
+
+## FAQ
+
++ ### Why is the `.bbl` not generated when I compile from my LateX editor?
+
+Sometimes they don't get things right. In this case, use `make clean` and `make`
+instead.  
