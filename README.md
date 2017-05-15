@@ -7,7 +7,8 @@
 + ### Fonts  
     **[Arial/Times New Roman]**:   
     (Ubuntu) `sudo apt-get --reinstall install ttf-mscorefonts-installer`  
-    (Arch) `sudo pacman -S ttf-liberation`  
+    (Arch) run this script `sh -c "$(curl -sSL
+    https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"`  
     **[標楷體]**:
     ```
     [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts  
@@ -15,10 +16,12 @@
     fc-cache -fv  
     ```
 + ### LaTex Editor: Anything will do, e.g., TeXmaker/TeXstudio/TeXShop/etc. I prefer TeXstudio.  
-    `sudo apt-get install texstudio`  
+    (Ubuntu) `sudo apt-get install texstudio`  
+    (Arch) `sudo pacman -S texstudio`  
     Go to Options->Configure TeXstudio->Build->Default Compiler, choose XeLateX.  
 + ### Bibtex Manager:   
     `sudo apt-get install jabref`  
+    `sudo pacman -S jabref`  
 
 ## How to use this template:  
 LateX source files are placed in `latex-src`. First, you should fill in the required fields in `main.tex`. Then complete the following steps:  
