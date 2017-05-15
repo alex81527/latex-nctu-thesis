@@ -9,7 +9,7 @@
 % Fill in all the required fileds, and your're ready to go
 \newcommand{\CoverPage}{cover_page/cover.pdf}
 \newcommand{\TitlePage}{title_page/title.pdf}
-% You should fill in the fields in chinese_abstract/ab_zh.tex, and abstract/ab.tex
+% Fill in the fields in chinese_abstract/ab_zh.tex, and abstract/ab.tex as well
 \newcommand{\ChineseAbstract}{chinese_abstract/ab_zh}
 \newcommand{\Abstract}{abstract/ab}
 \newcommand{\Acknowledgement}{acknowledgement/ack}
@@ -25,7 +25,7 @@
 \newcommand{\AdvisorNameEnglish}{Shyan-Ming Yuan}
 \newcommand{\AdvisorNameChinese}{袁賢銘}
 
-% You can select fonts other than the default ones. (Recommended) 
+% Using the following fonts is recommended
 \newcommand{\EnglishFont}{Times New Roman}
 \newcommand{\ChineseFont}{DFKai-SB}
 
@@ -67,10 +67,12 @@
 \XeTeXlinebreakskip = 0pt plus 1pt 
 
 % Select fonts
-\setmainfont[Mapping=tex-text]{\EnglishFont} 
+% Ligatures refer to the replacement of two separate characters with a specially drawn
+% glyph for functional or æsthetic reasons.
+\setmainfont[Ligatures=TeX]{\EnglishFont} 
 %AutoFakeBold設定粗體字要多粗
 %AutoFakeSlant設定斜體字要多斜，範圍-0.999到0.999，負值為往左斜
-\setCJKmainfont[AutoFakeBold=5,AutoFakeSlant=.4]{\ChineseFont} 
+\setCJKmainfont[Ligatures=TeX, AutoFakeBold=3, AutoFakeSlant=.4]{\ChineseFont} 
 
 
 % copy from macros.tex
