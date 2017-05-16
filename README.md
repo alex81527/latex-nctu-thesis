@@ -12,10 +12,15 @@
     Windows users can skip this step, since Arial/Times New Roman/標楷體 are Microsoft system fonts.
 
     **[Arial/Times New Roman]**:   
-    | OS            | Command                                                                                                                         |
-    |---------------|---------------------------------------------------------------------------------------------------------------------------------|
-    | Debian/Ubuntu | `sudo apt-get --reinstall install ttf-mscorefonts-installer`                                                                    |
-    | ArchLinux     | `sh -c "$(curl -sSL,https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"` |
+    
+    Debian/Ubuntu:  
+    ```
+    sudo apt-get --reinstall install ttf-mscorefonts-installer  
+    ```   
+    ArchLinux:  
+    ```
+    sh -c "$(curl -sSL,https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"  
+    ```  
     
     
     **[標楷體]**:
