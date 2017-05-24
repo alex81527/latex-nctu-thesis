@@ -19,7 +19,7 @@
     ```   
     ArchLinux:  
     ```
-    sh -c "$(curl -sSL,https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"  
+    sh -c "$(curl -sSL https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"  
     ```  
     
     
