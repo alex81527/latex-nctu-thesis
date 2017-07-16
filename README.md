@@ -19,7 +19,7 @@
     ```   
     ArchLinux:  
     ```
-    sh -c "$(curl -sSL https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/install-ms-fonts.sh)"  
+    yaourt -S ttf-ms-fonts   
     ```  
     
     
@@ -27,7 +27,7 @@
     ```
     [ ! -d ~/.local/share/fonts ] && mkdir -p ~/.local/share/fonts  
     curl -sSL https://raw.githubusercontent.com/alex81527/latex-nctu-thesis/master/latex-src/fonts/kaiu.ttf > ~/.local/share/fonts/kaiu.ttf  
-    fc-cache -fv  
+    fc-cache -fv ~/.local/share/fonts  
     ```
 + ### LaTex Editor: Anything will do, e.g., TeXmaker/TeXstudio/TeXShop/etc. I prefer TeXstudio.  
     | OS            | Command                               |
