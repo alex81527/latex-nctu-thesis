@@ -1,4 +1,4 @@
-# A LateX template for Phd/MS thesis of College of Computer Science, National Chiao Tung University, Hsinchu, Taiwan.  
+# A LateX template for PhD/MS thesis of College of Computer Science, National Chiao Tung University, Hsinchu, Taiwan.  
 
 ## Required Packages:  
 + ### TexLive:  
